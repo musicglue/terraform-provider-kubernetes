@@ -252,14 +252,14 @@ resource "kubernetes_daemonset" "test" {
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         foo = "bar"
       }
     }
 
     template {
       metadata {
-        labels {
+        labels = {
           foo = "bar"
         }
       }
@@ -280,12 +280,12 @@ func testAccKubernetesDaemonSetConfig_basic(name string) string {
 	return fmt.Sprintf(`
 resource "kubernetes_daemonset" "test" {
   metadata {
-    annotations {
+    annotations = {
       TestAnnotationOne = "one"
       TestAnnotationTwo = "two"
     }
 
-    labels {
+    labels = {
       TestLabelOne   = "one"
       TestLabelTwo   = "two"
       TestLabelThree = "three"
@@ -296,7 +296,7 @@ resource "kubernetes_daemonset" "test" {
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         TestLabelOne   = "one"
         TestLabelTwo   = "two"
         TestLabelThree = "three"
@@ -305,7 +305,7 @@ resource "kubernetes_daemonset" "test" {
 
     template {
       metadata {
-        labels {
+        labels = {
           TestLabelOne   = "one"
           TestLabelTwo   = "two"
           TestLabelThree = "three"
@@ -328,12 +328,12 @@ func testAccKubernetesDaemonSetConfig_modified(name string) string {
 	return fmt.Sprintf(`
 resource "kubernetes_daemonset" "test" {
   metadata {
-    annotations {
+    annotations = {
       TestAnnotationOne = "one"
       Different         = "1234"
     }
 
-    labels {
+    labels = {
       TestLabelOne   = "one"
       TestLabelThree = "three"
     }
@@ -343,7 +343,7 @@ resource "kubernetes_daemonset" "test" {
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         TestLabelOne   = "one"
         TestLabelTwo   = "two"
         TestLabelThree = "three"
@@ -352,7 +352,7 @@ resource "kubernetes_daemonset" "test" {
     
     template {
       metadata {
-        labels {
+        labels = {
           TestLabelOne   = "one"
           TestLabelTwo   = "two"
           TestLabelThree = "three"
@@ -377,26 +377,26 @@ resource "kubernetes_daemonset" "test" {
   metadata {
     name = "%s"
 
-    labels {
+    labels = {
       Test = "TfAcceptanceTest"
     }
   }
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         Test = "TfAcceptanceTest"
       }
     }
 
     template {
       metadata {
-        labels {
+        labels = {
           foo  = "bar"
           Test = "TfAcceptanceTest"
         }
 
-        annotations {
+        annotations = {
           "prometheus.io/scrape" = "true"
           "prometheus.io/scheme" = "https"
           "prometheus.io/port"   = "4000"
@@ -421,26 +421,26 @@ resource "kubernetes_daemonset" "test" {
   metadata {
     name = "%s"
 
-    labels {
+    labels = {
       Test = "TfAcceptanceTest"
     }
   }
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         Test = "TfAcceptanceTest"
       }
     }
 
     template {
       metadata {
-        labels {
+        labels ={
           foo  = "bar"
           Test = "TfAcceptanceTest"
         }
 
-        annotations {
+        annotations = {
           "prometheus.io/scrape" = "true"
           "prometheus.io/scheme" = "http"
           "prometheus.io/port"   = "8080"
@@ -465,21 +465,21 @@ resource "kubernetes_daemonset" "test" {
   metadata {
     name = "%s"
 
-    labels {
+    labels = {
       foo = "bar"
     }
   }
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         foo = "bar"
       }
     }
 
     template {
       metadata {
-        labels {
+        labels = {
           foo = "bar"
         }
       }
@@ -511,14 +511,14 @@ resource "kubernetes_daemonset" "test" {
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         foo = "bar"
       }
     }
 
     template {
       metadata {
-        labels {
+        labels = {
           foo = "bar"
         }
       }
