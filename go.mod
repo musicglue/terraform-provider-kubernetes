@@ -16,14 +16,13 @@ require (
 	github.com/hashicorp/go-uuid v1.0.1 // indirect
 	github.com/hashicorp/go-version v1.1.0
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/hashicorp/hcl2 v0.0.0-20190214115825-fb2bc46cdbe3 // indirect
 	github.com/hashicorp/hil v0.0.0-20190212132231-97b3a9cdfa93 // indirect
-	github.com/hashicorp/terraform v0.12.0-alpha4.0.20190221203539-cea81d921a5b
+	github.com/hashicorp/terraform v0.12.0-alpha4.0.20190325202835-d5bb09b13b66
 	github.com/hashicorp/vault v1.0.3 // indirect
 	github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d // indirect
 	github.com/imdario/mergo v0.3.6 // indirect
 	github.com/keybase/go-crypto v0.0.0-20181127160227-255a5089e85a // indirect
-	github.com/mattn/go-colorable v0.1.0 // indirect
+	github.com/masterzen/azure-sdk-for-go v0.0.0-20161014135628-ee4f0065d00c // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
@@ -36,10 +35,7 @@ require (
 	github.com/terraform-providers/terraform-provider-tls v1.2.0 // indirect
 	github.com/ulikunitz/xz v0.5.6 // indirect
 	github.com/vmihailenco/msgpack v4.0.2+incompatible // indirect
-	github.com/zclconf/go-cty v0.0.0-20190212192503-19dda139b164 // indirect
 	go.opencensus.io v0.19.0 // indirect
-	golang.org/x/crypto v0.0.0-20190219172222-a4c6cb3142f2 // indirect
-	golang.org/x/sys v0.0.0-20190221075227-b4e8571b14e0 // indirect
 	google.golang.org/genproto v0.0.0-20190219182410-082222b4a5c5 // indirect
 	k8s.io/api v0.0.0-20181221193117-173ce66c1e39
 	k8s.io/apimachinery v0.0.0-20190210215030-4521e64aecd3
