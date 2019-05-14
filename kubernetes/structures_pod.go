@@ -15,6 +15,10 @@ func flattenPodSpec(in v1.PodSpec) ([]interface{}, error) {
 		att["active_deadline_seconds"] = *in.ActiveDeadlineSeconds
 	}
 
+	if in.AutomountServiceAccountToken != nil {
+		att["automount_service_account_token"] = *in.AutomountServiceAccountToken
+	}
+
 	containers, err := flattenContainers(in.Containers)
 	if err != nil {
 		return nil, err
@@ -324,6 +328,10 @@ func expandPodSpec(p []interface{}) (*v1.PodSpec, error) {
 
 	if v, ok := in["active_deadline_seconds"].(int); ok && v > 0 {
 		obj.ActiveDeadlineSeconds = ptrToInt64(int64(v))
+	}
+
+	if v, ok := in["automount_service_account_token"]; ok {
+		obj.AutomountServiceAccountToken = ptrToBool(v.(bool))
 	}
 
 	if v, ok := in["container"].([]interface{}); ok && len(v) > 0 {
